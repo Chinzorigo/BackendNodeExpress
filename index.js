@@ -11,12 +11,12 @@ const config = {
         encrypt: false,
     },
 }
-
+const pool = await sql.connect(config);
 // database connection
 
 
  // get data
-sql.connect(config).then(pool => {
+/* sql.connect(config).then(pool => {
     // Query
     return pool.request()
         .query('select * from users', function(err, recordset){ 
@@ -27,15 +27,15 @@ sql.connect(config).then(pool => {
                 console.log(recordset) 
             }
         })
-});
+}); */
 
 
 // insert data
-/* sql.connect(config).then(pool => {
+sql.connect(config).then(pool => {
     // Query
     console.log("INSERT");
     return pool.request()
-        .query("INSERT INTO users (Code, Ner) VALUES (13, 'Nanzaa')", function(err, recordset){ 
+        .query("INSERT INTO users (Id, FirstName, Lastname, Age, Sex, Email, Phone, PhysicalAddress) VALUES (15, 'Chinzorig', 'Oasdfs', 30, 'M', 'chinzorig.o@gmail.com', 99112233, 'Khan-Uul district')", function(err, recordset){ 
             if(err){
                 console.log(err);
             }
@@ -44,7 +44,7 @@ sql.connect(config).then(pool => {
             }
         })
 });
- */
+
 // update data
 /* sql.connect(config).then(pool => {
     // Query
