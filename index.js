@@ -1,4 +1,4 @@
-const sql = require('mssql')
+/* const sql = require('mssql')
 
 const config = {
     database: 'reactproject20230205',
@@ -11,7 +11,7 @@ const config = {
         encrypt: false,
     },
 }
-const pool = await sql.connect(config);
+const pool = await sql.connect(config); */
 // database connection
 
 
