@@ -1,5 +1,5 @@
 const db = require("../models");
-const usersDB = db.users;
+const usersDB = db.userss;
 const Op = db.Sequelize.Op;
 
 // Create and Save a new users
@@ -34,6 +34,7 @@ exports.create = (req, res) => {
 
 // Retrieve all userss from the database.
 exports.findAll = (req, res) => {
+  console.log(res);
   const title = req.query.title;
   var condition = title ? { title: { [Op.like]: `%${title}%` } } : null;
 
