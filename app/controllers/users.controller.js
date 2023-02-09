@@ -30,11 +30,10 @@ exports.create = (req, res) => {
           err.message || "Some error occurred while creating the users."
       });
     });
-};
+}; 
 
 // Retrieve all userss from the database.
 exports.findAll = (req, res) => {
-  console.log(res);
   const title = req.query.title;
   var condition = title ? { title: { [Op.like]: `%${title}%` } } : null;
 
